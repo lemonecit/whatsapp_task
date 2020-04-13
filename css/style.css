@@ -1,0 +1,569 @@
+header {
+  background-color: #0f9688;
+  height: 140px;
+  position: relative;
+  top: 200;
+  margin: 0;
+}
+
+body {
+  margin: 0px;
+  background-color: #D9DBD5;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+}
+
+main {
+  z-index: 1;
+  left: 200px;
+  top: 30px;
+  position: fixed;
+  background-color: #d9dbd4;
+  width: 80%;
+  margin: 0px auto;
+  height: 880px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  grid-template-areas: "leftpanel rightpanel";
+box-shadow: 1px 1px 1px 1px #00000021;
+}
+
+.panel1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 13% 87%;
+  grid-area: leftpanel;
+  background-color: white;
+  grid-template-areas:
+      "leftpanel_p1"
+      "members";
+
+}
+
+.panel2 {
+  display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 7% 88% auto;
+      border-left: 1px solid #f1e9e9;
+      grid-area: rightpanel;
+      background-color: #8a8989;
+      grid-template-areas:
+          "status_members"
+          "member_chat_windows"
+          "chat_fields";
+
+}
+
+.leftpanel_part1 {
+  grid-area: leftpanel_p1;
+  display: grid;
+  grid-template-rows: 55% 45%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "profile_panels"
+    "search_panel";
+}
+
+.profile_Panel {
+  align-items: center;
+      display: grid;
+      grid-template-areas: "profile_pics statuss chats menus";
+      grid-template-rows: 100%;
+      grid-template-columns: 70% 10% 10% 10%;
+      background-color: #ededed;
+      grid-area: profile_panels;
+      border-bottom: 1px solid #f1e9e9;
+      border-right: 1px solid #f1e9e9;
+
+}
+
+
+
+
+.profile_pic {
+  left: 20px;
+      position: relative;
+      grid-area: profile_pics;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      z-index: 1000;
+      /* top: 5px; */
+}
+
+
+
+#status {
+grid-area:statuss;
+
+
+}
+
+#chat {
+grid-area:chats;
+
+}
+
+#menu {
+
+grid-area:menus;
+
+}
+
+
+
+.search_Panel {
+  background-color: #f7f7f7;
+  width: 100%;
+  grid-area: search_panel;
+  z-index: 0;
+  border-bottom: 1px solid #f1e9e9;
+}
+
+
+.search_Panel input {
+  top: 5px;
+  text-align: center;
+  margin: 0px auto;
+  width: 95%;
+  border-radius: 50px;
+  border: 1px solid white;
+  height: 37px;
+  z-index: 0;
+  display: block;
+  position: relative;
+  background-color: white;
+}
+
+
+
+input {
+  /* top: 5px; */
+  text-align: center;
+  margin: 0px auto;
+  width: 95%;
+  border-radius: 50px;
+  border: 1px solid white;
+  height: 30px;
+  z-index: 0;
+  display: block;
+  position: relative;
+  background-color: white;
+
+}
+
+
+.profile_pic:hover {
+  height: 200px;
+  width: 200px;
+  z-index: 10000;
+  border: 5px solid black;
+  position: absolute;
+  top: 10px;
+}
+
+.msg_profile {
+  position: relative;
+  /* justify-content: center; */
+  text-align: center;
+  grid-area: msg_profiles;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 13px;
+  left: 20px;
+}
+
+.member {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  grid-area: members;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(100, 80px);
+  grid-template-areas:
+      "member_panels"
+      "member_panels_1"
+      "member_panels_2"
+      "member_panels_3"
+      "member_panels_4"
+      "member_panels_5"
+      "member_panels_6"
+      "member_panels_7"
+            "member_panels_8"
+                  "member_panels_9"
+                        "member_panels_10"
+
+      ;
+
+}
+
+.member_panel {
+  grid-area: member_panels;
+      display: grid;
+      grid-template-columns: auto 70% 10%;
+      grid-template-rows: auto auto ;
+      grid-template-areas:
+          "msg_profiles msg_names msg_timesamples"
+          "msg_profiles msg_phones msg_count_panels"
+          ;
+            border-bottom: 1px solid #f1e9e9;
+
+}
+
+
+
+
+#memberhover:hover {
+  background-color: #f5f5f5;
+}
+
+.member_panel1 {
+  grid-area: member_panels_1;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.member_panel2 {
+  grid-area: member_panels_2;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.member_panel3 {
+  grid-area: member_panels_3;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+.member_panel4 {
+  grid-area: member_panels_4;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+.member_panel5 {
+  grid-area: member_panels_5;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.member_panel6 {
+  grid-area: member_panels_6;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+.member_panel7 {
+  grid-area: member_panels_7;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.member_panel8 {
+  grid-area: member_panels_8;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.member_panel9 {
+  grid-area: member_panels_9;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+.member_panel10 {
+  grid-area: member_panels_10;
+  display: grid;
+  grid-template-columns: auto 70% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "msg_profiles msg_names msg_timesamples"
+    "msg_profiles msg_phones msg_count_panels";
+    border-bottom: 1px solid #f1e9e9;
+}
+
+
+.msg_name {
+  font-weight: 500;
+      text-transform: uppercase;
+      font-size: 17px;
+      grid-area: msg_names;
+      position: relative;
+      top: 15px;
+}
+
+.msg_time {
+  grid-area: msg_timesamples;
+      position: relative;
+      top: 15px;
+      text-align: center;
+      font-size: 12px;
+
+}
+
+.msg_phone {
+  grid-area: msg_phones;
+  font-size:14px;
+}
+
+.msg_count_panel {
+  grid-area: msg_count_panels;
+
+  display: block;
+
+  text-align: center;
+}
+
+.msg_count {
+  padding: 4px;
+  grid-area: msg_counts;
+  background-color: #06d755;
+  /* display: block; */
+  border-radius: 50%;
+  /* width: 30px; */
+  text-align: center;
+  /* height: 30px; */
+  color: white;
+  font-size: 12px;
+  position: relative;
+  bottom: 7px;
+}
+
+.member_phone_flag {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+
+.status_member {
+   background-color: #ededed;
+  grid-area:status_members;
+
+}
+
+.member_chat_window{
+  background: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+
+  background-repeat: repeat-x;
+  background-size: 45%;
+  overflow-y: scroll;
+  grid-area: member_chat_windows;
+
+}
+
+.chat_field {
+      align-items: center;
+  display:grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas:
+
+  "chat_smiles chat_inputs chat_microphone";
+     background-color: #ededed;
+  grid-area:chat_fields;
+
+}
+
+
+#chat_smile {
+  text-align: center;
+      grid-area: chat_smiles;
+      color: #919191;
+      font-size: 20px;
+  }
+
+
+#chat_input {
+
+grid-area:chat_inputs;
+color:#919191;
+
+}
+
+#chat_microphone {
+        font-size: 20px;
+
+  text-align: center;
+grid-area:chat_microphone;
+color:#919191;
+
+}
+
+.hebrew {
+
+direction: rtl;
+
+}
+
+
+i {
+
+
+color:#919191;
+
+}
+
+
+.chatkonveration {
+  margin-bottom:50px;
+margin-top:50px;
+display: grid;
+grid-template-columns: 10% 30% 20% 30% 10%;
+grid-template-rows: auto auto auto;
+grid-template-areas:
+". . date_chats . ."
+". output_panels . . ."
+". . . input_panels .";
+}
+
+
+
+
+
+.date_chat {
+border-radius: 50px;
+  width: 71px;
+      grid-area: date_chats;
+      display: block;
+      background-color: #e1f5fe;
+      color: #000000;
+      padding: 5px;
+      font-size: 12px;
+      text-align: center;
+      margin: 0 auto;
+
+}
+
+.outmessage_panel {
+  margin-top:30px;
+grid-area:output_panels;
+
+  background-color:#ffffff;
+  color:#303030;
+min-height: 50px;
+  padding:5px;
+  font-size:12px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  ". . ."
+  ". output_messages ."
+  ". . time_samples";
+}
+
+
+.inputmessage_panel {
+  margin-top:30px;
+
+grid-area:input_panels;
+
+  background-color:#dcf8c6;
+  color:#303030;
+min-height: 50px;
+  padding:5px;
+  font-size:12px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  ". . ."
+  ". input_messages ."
+  ". . time_samples";
+}
+
+
+
+
+
+
+
+.input_message {
+grid-area:input_messages;
+
+
+}
+
+.output_message {
+
+  grid-area:output_messages;
+}
+
+.time_sample {
+
+ font-size: 11px;
+  grid-area:time_samples;
+}
+
+.outmessage_panel img {
+
+  object-fit: cover;
+      width: 80%;
+
+}
+
+
+.inputmessage_panel img {
+
+  object-fit: cover;
+      width: 80%;
+
+}

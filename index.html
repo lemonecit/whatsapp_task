@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/f33a0e9c44.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+
+</header>
+
+<main>
+
+  <div class="panel1">
+
+    <div class="leftpanel_part1">
+      <div class="profile_Panel">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQis59L4WH0BwbGZxwz3U7INiNHaGuh_5D_srp5GItwagTtLwkJ&usqp=CAU" width="200px;" height="200px;" class="profile_pic">
+      <i id="status" class="far fa-compass"></i>
+      <i id="chat" class="fas fa-comment-dots"></i>
+      <i id="menu" class="fas fa-ellipsis-v"></i>
+
+
+      </div>
+
+      <div class="search_Panel">
+        <input type="text" placeholder="Search or start a new chat">
+      </div>
+    </div>
+
+
+    <div class="member">
+
+      <div class="member_panel" id="memberhover" onclick="openChat('mem1')">
+
+        <img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+        <span class="msg_name">Albert Einstein</span>
+
+        <span class="msg_time">17:25</span>
+        <span class="msg_phone">532387441</span>
+        <div class="msg_count_panel">
+          <span class="msg_count">711</span>
+        </div>
+
+
+
+
+
+      </div>
+
+      <div class="member_panel1" id="memberhover" onclick="openChat('mem2')">
+
+        <img src="data:image/jpeg;base64,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" class="msg_profile">
+
+        <span class="msg_name">Cameron Diaz</span>
+
+        <span class="msg_time">17:25</span>
+        <span class="msg_phone">0532387441</span>
+        <div class="msg_count_panel">
+          <span class="msg_count">71</span>
+        </div>
+
+      </div>
+
+        <div class="member_panel2" id="memberhover">
+
+        <img src="https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_400x400.jpg" class="msg_profile">
+
+        <span class="msg_name">Bill Gates</span>
+
+        <span class="msg_time">17:25</span>
+        <span class="msg_phone">0532387441</span>
+        <div class="msg_count_panel">
+          <span class="msg_count">71</span>
+        </div>
+
+      </div>
+
+      <div class="member_panel3" id="memberhover">
+
+      <img src="https://i.pinimg.com/originals/d5/a4/72/d5a47247a5ee60aaa3dfa4f85454fa13.jpg" class="msg_profile">
+
+      <span class="msg_name">Linus Torvalds</span>
+
+      <span class="msg_time">17:25</span>
+      <span class="msg_phone">0532387441</span>
+      <div class="msg_count_panel">
+        <span class="msg_count">71</span>
+      </div>
+
+    </div>
+
+
+    <div class="member_panel4" id="memberhover">
+
+    <img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+    <span class="msg_name">Albert Einstein</span>
+
+    <span class="msg_time">17:25</span>
+    <span class="msg_phone">0532387441</span>
+    <div class="msg_count_panel">
+      <span class="msg_count">71</span>
+    </div>
+
+  </div>
+
+
+  <div class="member_panel5" id="memberhover">
+
+  <img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+  <span class="msg_name">Albert Einstein</span>
+
+  <span class="msg_time">17:25</span>
+  <span class="msg_phone">0532387441</span>
+  <div class="msg_count_panel">
+    <span class="msg_count">71</span>
+  </div>
+
+</div>
+
+
+<div class="member_panel6" id="memberhover">
+
+<img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+<span class="msg_name">Albert Einstein</span>
+
+<span class="msg_time">17:25</span>
+<span class="msg_phone">0532387441</span>
+<div class="msg_count_panel">
+  <span class="msg_count">71</span>
+</div>
+
+</div>
+
+
+<div class="member_panel7" id="memberhover">
+
+<img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+<span class="msg_name">Albert Einstein</span>
+
+<span class="msg_time">17:25</span>
+<span class="msg_phone">0532387441</span>
+<div class="msg_count_panel">
+  <span class="msg_count">71</span>
+</div>
+
+</div>
+
+
+<div class="member_panel8" id="memberhover">
+
+<img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+<span class="msg_name">Albert Einstein</span>
+
+<span class="msg_time">17:25</span>
+<span class="msg_phone">0532387441</span>
+<div class="msg_count_panel">
+  <span class="msg_count">71</span>
+</div>
+
+</div>
+
+<div class="member_panel9" id="memberhover">
+
+<img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+<span class="msg_name">Albert Einstein</span>
+
+<span class="msg_time">17:25</span>
+<span class="msg_phone">0532387441</span>
+<div class="msg_count_panel">
+  <span class="msg_count">71</span>
+</div>
+
+</div>
+
+
+<div class="member_panel10" id="memberhover">
+
+<img src="https://ichef.bbci.co.uk/news/410/media/images/82399000/jpg/_82399978_75952740.jpg" class="msg_profile">
+
+<span class="msg_name">Albert Einstein</span>
+
+<span class="msg_time">17:25</span>
+<span class="msg_phone">0532387441</span>
+<div class="msg_count_panel">
+  <span class="msg_count">71</span>
+</div>
+
+</div>
+
+
+<!-- ending of member panel -->
+    </div>
+
+    <!-- ending of panel1 -->
+  </div>
+
+    <div class="panel2">
+      <div class="status_member">
+
+
+      </div>
+
+      <div class="member_chat_window">
+
+        <div id="mem1" class="w3-container chat" >
+
+              <div class="chatkonveration">
+
+                      <time class="date_chat">2020-03-24</time>
+                      <div class="outmessage_panel">
+                        <span class="output_message">
+                          Hejsan, hur är läget?
+
+
+                        </span>
+                                  <time class="time_sample">14:04</time>
+                        </div>
+
+                        <div class="inputmessage_panel">
+                          <span class="input_message">Vad roligt att du hört av dig.</span>
+                                  <time class="time_sample">14:04</time>
+                          </div>
+              </div>
+
+              <div class="chatkonveration">
+
+                      <time class="date_chat">2020-03-25</time>
+                      <div class="outmessage_panel">
+                        <span class="output_message">
+
+    <iframe width="250" height="315" src="https://www.youtube-nocookie.com/embed/krVxsn9f4m4?start=138" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+
+
+                        </span>
+                          <time class="time_sample">14:04</time>
+                        </div>
+
+                        <div class="inputmessage_panel hebrew">
+                          <span class="input_message"> طباعة   البريد الإلكتروني
+Lorem ipsum للمصممين نص لوريم ايبسوم عربي
+ المجموعة: مقالات دعاية  الزيارات: 121736
+
+ Lorem ipsum  للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي
+
+  ما هو لوريم ايبسوم  Lorem ipsum
+لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ...
+
+وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي..</span>
+                                  <time class="time_sample">14:04</time>
+                          </div>
+              </div>
+
+              <div class="chatkonveration">
+
+                      <time class="date_chat">2020-03-26</time>
+                      <div class="outmessage_panel">
+                        <span class="output_message">
+                          Hejsan, hur är läget?
+
+
+                        </span>
+                          <time class="time_sample">14:04</time>
+                        </div>
+
+
+                            <div class="inputmessage_panel hebrew">
+                              <span class="input_message">אתם יודעים לקרוא עברית?</span>
+                                      <time class="time_sample">14:04</time>
+                              </div>
+
+
+              </div>
+
+              <div class="chatkonveration">
+
+                      <time class="date_chat">2020-03-26</time>
+
+                          <div class="outmessage_panel">
+                            <span class="output_message">
+                              <img src="https://images.unsplash.com/photo-1567699343233-48ee7e452824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+
+
+                            </span>
+                              <time class="time_sample">21:34</time>
+                            </div>
+
+                        <div class="inputmessage_panel">
+
+
+
+                        <span class="input_message">
+
+                            <img src="https://images.unsplash.com/photo-1567697575452-f21db61f9849?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80" alt="">
+
+                        </span>
+                              <time class="time_sample">21:34</time>
+
+                        </div>
+
+              </div>
+
+              <div class="chatkonveration">
+
+                      <time class="date_chat">2020-03-26</time>
+                      <div class="outmessage_panel">
+                        <span class="output_message">
+                            What beautiful pic!
+
+
+                        </span>
+                          <time class="time_sample">21:35</time>
+                        </div>
+
+                        <div class="inputmessage_panel">
+                          <span class="input_message">
+
+                                <a href="https://www.aftonbladet.se/" target="_blank">https://www.aftonbladet.se/</a>
+
+                          </span>
+                                  <time class="time_sample">14:04</time>
+                          </div>
+              </div>
+
+
+
+
+
+        </div>
+
+        <div id="mem2" class="w3-container chat" style="display:none" onclick="openChat('mem3')">
+          <div class="chatkonveration">
+
+                  <time class="date_chat">2020-03-26</time>
+
+                      <div class="outmessage_panel">
+                        <span class="output_message">
+                          <img src="https://images.unsplash.com/photo-1567699343233-48ee7e452824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+
+
+                        </span>
+                          <time class="time_sample">21:34</time>
+                        </div>
+
+                    <div class="inputmessage_panel">
+
+
+
+                    <span class="input_message">
+
+                        <img src="https://images.unsplash.com/photo-1567697575452-f21db61f9849?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80" alt="">
+
+                    </span>
+                          <time class="time_sample">21:34</time>
+
+                    </div>
+
+          </div>
+
+
+            <!-- ending of mem2 -->
+        </div>
+
+
+        <div id="mem3" class="w3-container chat" style="display:none" onclick="openChat('mem4')">
+
+
+
+            <!-- ending of mem2 -->
+        </div>
+
+
+      </div>
+
+      <div class="chat_field">
+                <i id="chat_smile" class="fa fa-smile-o" aria-hidden="true"></i>
+                <input id="chat_input" type="text" placeholder="Type a message">
+                <i id="chat_microphone" class="fa fa-microphone" aria-hidden="true"></i>
+
+      </div>
+
+
+    </div>
+
+</main>
+
+<footer>
+
+</footer>
+  </body>
+
+
+
+
+
+
+
+  <script>
+  function openChat(cityName) {
+    var i;
+    var x = document.getElementsByClassName("chat");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(cityName).style.display = "block";
+  }
+  </script>
+
+
+
+
+
+
+</html>
